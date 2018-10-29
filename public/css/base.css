@@ -1,0 +1,40 @@
+/* 覆盖mui对有关元素的初始化 */
+input, button{
+    border-radius: 0 !important;
+}
+button{
+    border-radius: 0 !important;
+}
+/* 初始化标签 */
+ul,li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+li{
+    float: left;
+}
+/*清除浮动*/
+.clearfix:before, .clearfix:after{
+    content:"";
+    display: block;
+    clear: both;
+}
+img{vertical-align: bottom;}
+a{color: #333;}
+p{color: #333; margin: 0;}
+
+/* 直角箭头图标 */
+.arrow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.arrow::after{
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+}
