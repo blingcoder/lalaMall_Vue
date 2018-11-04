@@ -12,7 +12,7 @@
           <span class="mui-icon mui-icon-list"></span>
           <span class="mui-tab-label">分类</span>
       </router-link>
-      <router-link class="mui-tab-item" to="/load">
+      <router-link class="mui-tab-item" to="/cart">
           <span class="mui-icon mui-icon-extra mui-icon-extra-cart"><span class="mui-badge">0</span></span>
           <span class="mui-tab-label">购物车</span>
       </router-link>
@@ -24,7 +24,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
   .app-container{
     padding-top: 45px;
     padding-bottom: 50px;

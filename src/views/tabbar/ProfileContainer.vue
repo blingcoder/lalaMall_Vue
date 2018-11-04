@@ -7,14 +7,18 @@
                 <div class="member">
                     <p class="name">小叮当</p>
                     <div></div>
-                    <p class="addr arrow">收货地址</p>
+                    <router-link to="/profile/addrmanage" class="addr arrow">收货地址</router-link>
                 </div>
-                <div class="msg">消息盒子</div>
+                <div class="msg">
+                    <router-link class="color" to="/profile/messagebox">消息盒子</router-link>
+                </div>
             </div>
             <div class="lofty">
-                <div class="discount">
-                    <p>2</p>
-                    <span>优惠券</span>
+                <div class="coupon">
+                    <router-link to="/profile/coupon">
+                        <p>2</p>
+                        <span>优惠券</span>
+                    </router-link>
                 </div>
                 <div class="account">
                     <p>0.00</p>
@@ -41,7 +45,7 @@
                     <li class="list-item" v-for="item in myorder">
                         <a href="#">
                             <img :src="item.img_url">
-                            <p>{{item.title}}<span>{{item.num}}</span></p>
+                            <p>{{item.title}}<span>{{item.num | hideZero}}</span></p>
                         </a>
                     </li>
                 </ul>
@@ -82,6 +86,14 @@
             this.$http.get(url).then(result=>{
                 this.myuse = result.body.msg;
             });
+        },
+        filters:{
+            hideZero(val){
+                if(val==0){
+                    return;
+                }
+                return val;
+            }
         }
     }
 </script>
@@ -113,6 +125,7 @@
         padding-top: 5px;
         font-size: 14px;
         width: 32%;
+        color: #fff;
     }
     .member>div{
         background: url("../../../public/img/icon_progress_24.png");
@@ -124,6 +137,7 @@
         padding-left: 30px;
         background: url("../../../public/img/box.png") no-repeat;
     }
+    .msg .color{color: #fff;}
     .lofty{
         display: flex;
         justify-content: space-around;

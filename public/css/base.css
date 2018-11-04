@@ -38,3 +38,27 @@ p{color: #333; margin: 0;}
     border-right: 2px solid #fff;
     transform: rotate(45deg);
 }
+
+/* 通用底部灰色边框线 */
+.bottom-border{
+    border-bottom: 1px solid #eee;
+}
+/* profile组件中地址管理通用样式 */
+.app-addrmanage{
+    background-color: #fff;
+    margin-top: -45px;
+    padding: 10px 0 200px;
+}
+/* 头部 */
+.manage-title{
+    padding: 5px 10px;
+}
+.manage-chin{
+    color: #DD514C;
+    font-size: 18px;
+}
+.manage-title .manage-i{
+    font-size: 16px;
+    vertical-align: bottom;
+}
+.manage-title .manage-eng{font-size: 12px;}

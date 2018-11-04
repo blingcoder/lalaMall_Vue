@@ -20,9 +20,16 @@ Vue.component(SwipeItem.name,SwipeItem);
 import VueResourse from 'vue-resource';
 //4. 加载VueResourse到当前项目中
 Vue.use(VueResourse);
+//5. 定义全局人民币¥过滤器
+Vue.filter("money",val=>{
+  return "¥"+val.toFixed(2);
+})
 
-//5. 设置全局ajax访问基础路径
+//6. 设置全局ajax访问基础路径
 Vue.http.options.root = "http://127.0.0.1:5050/";
+//7. 设置全局ajax post访问格式 配置指定post发送格式 发送数据格式形式 application/x-www-form-urlencoded
+Vue.http.options.emulateJSON = true;
+
 
 new Vue({
   router,
