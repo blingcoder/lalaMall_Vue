@@ -53,13 +53,14 @@
                 for(var i=0;i<res.length;i++){
                     res[i].pro_sorts = JSON.parse(res[i].pro_sorts);
                     // res[i].banner_url = JSON.parse(res[i].banner_url);
-                    console.log(result.body.msg[i].pro_sorts);
-                    console.log(typeof result.body.msg[i].pro_sorts);
+                    // console.log(result.body.msg[i].pro_sorts);
+                    // console.log(typeof result.body.msg[i].pro_sorts);
                 }
                 this.sortList = result.body.msg;
-                console.log(this.sortList);
-                // console.log(this.sortList[14].banner_url)
-                console.log(typeof this.sortList[14].banner_url)
+                // console.log(this.sortList);
+                console.log(this.sortList[1].banner_url)
+                console.log(this.sortList[4].banner_url)
+                // console.log(typeof this.sortList[14].banner_url)
             })
         },
         methods:{
