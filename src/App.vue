@@ -8,7 +8,7 @@
           <span class="mui-icon mui-icon-home"></span>
           <span class="mui-tab-label">首页</span>
       </router-link>
-      <router-link class="mui-tab-item" to="/search">
+      <router-link class="mui-tab-item" to="/sort">
           <span class="mui-icon mui-icon-list"></span>
           <span class="mui-tab-label">分类</span>
       </router-link>
